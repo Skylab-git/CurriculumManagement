@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.imooc.course.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddUserServlet</servlet-name>
+        <servlet-class>com.imooc.course.servlet.AddUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUserServlet</servlet-name>
+        <url-pattern>/AddUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SelectUsersServlet</servlet-name>
+        <servlet-class>com.imooc.course.servlet.SelectUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectUsersServlet</servlet-name>
+        <url-pattern>/SelectUsers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SelectUsersServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CourseInquiryServlet</servlet-name>
+        <servlet-class>com.imooc.course.servlet.CourseInquiryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CourseInquiryServlet</servlet-name>
+        <url-pattern>/CourseInquiryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddCourseServlet</servlet-name>
+        <servlet-class>com.imooc.course.servlet.AddCourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCourseServlet</servlet-name>
+        <url-pattern>/AddCourse</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CourseImportServlet</servlet-name>
+        <servlet-class>com.imooc.course.servlet.ImportExcelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CourseImportServlet</servlet-name>
+        <url-pattern>/CourseImportServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ExportCourseServlet</servlet-name>
+        <servlet-class>com.imooc.course.servlet.ExportCourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExportCourseServlet</servlet-name>
+        <url-pattern>/ExportCourseServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>CharsetEncodingFilter</filter-name>
+        <filter-class>com.imooc.course.filter.CharsetEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharsetEncodingFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
+</web-app>
